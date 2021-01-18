@@ -6,6 +6,7 @@ line = [1]
 
 line_view = ""
 
+# Clean screen and move cursor to the top
 print("\033[2J\033[0;0H")
 
 def new_line(old):
