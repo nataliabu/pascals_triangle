@@ -15,7 +15,8 @@ def new_line(old):
     b = 1
     new_line.append(old[0])
     for i in range(len(old) - 1):
-        new_line.append(old[a] + old[b])
+        c = old[a] + old[b]
+        new_line.append(c)
         a += 1
         b += 1
     new_line.append(old[-1])
@@ -26,3 +27,14 @@ while width >= len(line_view):
     line_str = [str(num) for num in line]
     line_view = "   ".join(line_str)
     line = new_line(line)
+
+explanation = """
+Let's start with 1 and imagine (invisible) 0s on each side of it.
+If we add them together in pairs, we get 0 + 1 = 1 and 1 + 0 = 1, which is
+how the second row is created.
+We do that again with the second row: 0 + 1 = 1, 1 + 1 = 2, and 1 + 0 = 1;
+and so we generate the third row.
+We can keep doing this as long as we want!
+"""
+
+print(explanation)
